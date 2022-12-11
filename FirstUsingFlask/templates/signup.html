@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}              
+            {% for message in messages %}
+            <div id="mismatch-alert" role="alert">
+                <h6> {{ message }}</h6>
+                <h6 id="alert-dismiss">X</h6>
+              </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+<section id="window">
+    <p id="head-signup">SIGN UP</p>
+    <form action="/signup" method="post" id="user-credentials">
+        <div id="user-credentials-name" class="user-credentials-input">
+            Name: <input type="text" name="userName" id="user-name" required placeholder="Name" value="">
+        </div>
+        <div id="user-credentials-dob" class="user-credentials-input">
+            Date Of Birth: <input type="date" name="userDob" id="user-dob" required value="">
+        </div>
+        <div id="user-credentials-id" class="user-credentials-input">
+            Email ID: <input type="email" name="userEmail" id="user-email" required placeholder="User ID / Email ID / Phone" value="">
+        </div>
+        <div id="user-credentials-passoword" class="user-credentials-input">
+            Password: <input type="password" name="userPassword" id="user-password" required placeholder="Password" value="">
+            <div id="show-password">Show</div>
+        </div>
+        <div id="user-credentials-passoword2" class="user-credentials-input">
+            Password: <input type="password" name="userPassword2" id="user-password2" required placeholder="Confirm Password" value="">
+        </div>
+        <button type="text" id="user-credentials-submit"><a href="" id="user-redirection"> Send OTP</a></button>
+        <div id="to-signin" class="switch">
+            <div>Already have an account? <a href="/"> SignIn Here</a></div>
+        </div>
+    </form>
+</section>
+
+{% endblock %}

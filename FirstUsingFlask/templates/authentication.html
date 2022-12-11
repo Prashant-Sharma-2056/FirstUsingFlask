@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+    {{ credentials.username}}
+
+<section id="window">
+    <p id="head-signup">VERIFY OTP</p>
+    <form action="/authentication" method="post" id="user-credentials">
+
+        
+        <div id="otpSent" class="secondaryAuthentication" class="user-credentials-input">
+            A 6-digit OTP has been {{credentials.emailid}} successfully sent to your E-mail ID.
+            <br>
+            <h6 id="user-authentication-email"></h6>
+        </div>
+        <div id="user-credentials-otp" class="user-credentials-input" class="secondaryAuthentication" class="user-credentials-input">
+            <!-- <span class="secondaryAuthentication"> OTP:</span> -->
+             <input type="number" name="userOTP" id="user-credentials-otp" class="secondaryAuthentication" placeholder="Enter the OTP">
+        </div>
+        <button type="text" id="user-credentials-submit"><a href="" id="user-redirection"> Verify & Continue</a></button>
+        <div id="to-signin" class="switch">
+            <div>Already have an account? <a href="/"> SignIn Here</a></div>
+        </div>
+    </form>
+</section>
+
+{% endblock %}

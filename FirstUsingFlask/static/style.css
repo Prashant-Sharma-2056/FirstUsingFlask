@@ -1,0 +1,104 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-size: 18px;
+}
+
+#window{
+    width: 44%;
+    display:block;
+    /* background-color: green; */
+    border: 0.25rem solid grey;
+    border-radius: 1.32rem;
+    text-align: center;
+    margin: 7% auto;
+    padding: 20px 0px;
+}
+
+#window p{
+    font-size: 50px;
+}
+
+
+#user-credentials input{
+    padding: 10px;
+    margin: 0px 15px;
+    width: 45%;
+    border: 3px solid gainsboro;
+    border-radius: 0.35rem;
+    font-size: 16px;
+}
+
+.user-credentials-input{
+    margin: 3% 0%;
+    font-size: 18px;
+    position: relative;
+}
+
+#user-credentials-dob{
+    left: -15px;
+}
+
+#user-credentials-name{
+    left: 13px;
+}
+
+#user-credentials-otp{
+    left: 15px;
+}
+
+#show-password{
+    display: flex;
+    position: absolute;
+    bottom: 28%;
+    left: 72%;
+    width: fit-content;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+#user-credentials-submit{
+    font-size: 1.15rem;
+    margin-top: 2%;
+    padding: 2% 4%;
+    cursor: pointer;
+    border: 3px solid gainsboro;
+    border-radius: 0.85rem;
+}
+
+#user-credentials-submit a{
+    color: black;
+    text-decoration: none;    
+}
+
+#user-credentials-submit:hover{
+    background-color: rgb(186, 199, 189);
+
+}
+
+.switch{
+    margin-top: 20px;
+}
+
+
+#mismatch-alert{
+    width: 80%;
+    margin: 20px auto;
+    border: 3px solid #f0d786;
+    border-radius: 10px;
+    background-color: #FFF3CD;
+    padding: 20px 2%;
+    display: flex;
+}
+
+#mismatch-alert h6{
+    margin-bottom: 0px;
+}
+
+#alert-dismiss{
+    display: flex;
+    align-items: right;
+    margin-left: auto;
+    cursor: pointer;
+
+}

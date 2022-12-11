@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <section id="window">
+        <p id="head-login">SIGN IN</p>
+        <form action="POST" id="user-credentials">
+            <div id="user-credentials-id" class="user-credentials-input">
+                Email ID: <input type="email" name="userEmail" id="user-email" required placeholder="User ID / Email ID / Phone" value="">
+            </div>
+            <div id="user-credentials-passoword" class="user-credentials-input">
+                Password: <input type="password" name="userPassword" id="user-password" required placeholder="Password" value="">
+                <div id="show-password">Show</div>
+            </div>
+            <button type="submit" id="user-credentials-submit"><a href="" id="user-redirection"> Sign In</a></button>
+            <div id="to-signup" class="switch">
+                <div>Didn't have account? <a href="/signup"> SignUp Here</a></div>
+            </div>
+        </form>
+    </section>
+    
+    {% endblock %}
